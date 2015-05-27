@@ -48,7 +48,7 @@ cx
 endsnippet
 
 snippet fup
-forceUpdate(${1:callback});
+forceUpdate(${1:callback})
 endsnippet
 
 snippet gdp "get default props" b
@@ -84,20 +84,14 @@ propTypes: {
 endsnippet
 
 snippet rcc "create class/component" b
-${1:/**
-* @jsx React.DOM
-*/
+${1:ClassName} = React.createClass
 
-var React = require('react')
-}
-${2:ClassName} = React.createClass
-
-render: ->
-	return (
-		${VISUAL}$4
-	)
-$0
-${3:module.exports = $2;}
+	render: ->
+		return (
+			${VISUAL}$4
+		)
+	$0
+${3:module.exports = $1}
 endsnippet
 
 snippet ren
@@ -127,5 +121,5 @@ this.state.${1}
 endsnippet
 
 snippet trp
-this.transferPropsTo(${VISUAL}$0);
+this.transferPropsTo(${VISUAL}$0)
 endsnippet
